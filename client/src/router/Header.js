@@ -27,9 +27,9 @@ const Header = (props) => {
 
     return (
         <HeaderWrapper>
-            <Logo onClick={() => history.push("/")}>
+            {/* <Logo onClick={() => history.push("/")}>
                 <NP />
-            </Logo>
+            </Logo> */}
 
             <Nav>
                 <NavLink
