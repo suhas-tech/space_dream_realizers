@@ -124,6 +124,19 @@ export const TwoColumnWrapper = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        & .two-column {
+            text-align: center;
+            display:flex;
+            align-items:center;
+            & .title {
+                font-weight: 600;
+                font-size: 28px;
+            }
+            & .address {
+                font-size: 20px;
+            }
+        }
     }
 `;
 

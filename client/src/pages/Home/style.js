@@ -137,7 +137,7 @@ export const ProjectInfo = styled.div`
 
 export const BuildingSection = styled.div`
     .blog-slider {
-        width: 95%;
+        // width: 95%;
         position: relative;
         max-width: 800px;
         margin: auto;
@@ -297,7 +297,7 @@ export const BuildingSection = styled.div`
             text-align: center;
             letter-spacing: 1px;
             @media screen and (max-width: 576px) {
-                width: 100%;
+              margin-bottom: 20px;
             }
         }
         .swiper-container-horizontal > .swiper-pagination-bullets,
