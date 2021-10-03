@@ -90,7 +90,7 @@ export const TextUnderConstruction = styled.div`
 `;
 
 export const ConstrcutionSection = styled.div`
-    max-height: 600px;
+    // max-height: 600px;
     width: 100%;
     padding: 60px 0;
     background-color: #f5f5f5;
@@ -117,6 +117,7 @@ export const ConstrcutionSection = styled.div`
 export const ProjectInfo = styled.div`
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
     & > div {
         display: inline;
         width: 100%;
@@ -247,9 +248,10 @@ export const BuildingSection = styled.div`
                 // width: 55%;
             }
             @media screen and (max-width: 768px) {
-                margin-top: -80px;
+                margin-top: -207px;
                 text-align: center;
-                padding: 0 30px;
+                padding: 30px 30px;
+             
             }
 
             @media screen and (max-width: 576px) {
