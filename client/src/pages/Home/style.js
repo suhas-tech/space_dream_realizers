@@ -212,7 +212,7 @@ export const BuildingSection = styled.div`
                     #fd3838 74%
                 );
                 border-radius: 20px;
-                opacity: 0.2;
+                opacity: 0;
             }
 
             img {
@@ -272,10 +272,20 @@ export const BuildingSection = styled.div`
         }
 
         &__title {
-            font-size: 28px;
+            font-size: 38px;
             font-weight: 700;
             color: #0d0925;
             margin-bottom: 5px;
+        }
+
+        @media screen and (max-width: 767px) {
+            &__title {
+                font-size: 28px;
+                font-weight: 700;
+                color: #0d0925;
+                margin-bottom: 5px;
+            }
+         
         }
 
         &__text {

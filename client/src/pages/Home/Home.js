@@ -12,6 +12,8 @@ import {
 
 import CONS from "@svg/Construction";
 import PARADISE from "@images/paradise.jpg";
+import PLAM from "@images/plamStreak.jpg";
+
 
 const Home = (props) => {
     return (
@@ -33,7 +35,7 @@ const Home = (props) => {
             </Banner>
             <ProjectInfo>
                 {" "}
-                <div>COMPLETED PROJECTS </div>{" "}
+                <div>AVAILABLE PROJECTS </div>{" "}
             </ProjectInfo>
             <ConstrcutionSection className="bg-white">
                 <Container>
@@ -65,15 +67,15 @@ const Home = (props) => {
                                         <span class="blog-slider__code">
                                             Bejai main road, near Bejai Church
                                         </span>
-                                        <div class="blog-slider__text">
+                                        {/* <div class="blog-slider__text">
                                             Lorem ipsum dolor sit amet
                                             consectetur, adipisicing elit.
                                             Recusandae voluptate repellendus
                                             magni illo ea animi?{" "}
-                                        </div>
-                                        <a href="#" class="blog-slider__button">
+                                        </div> */}
+                                        {/* <a href="#" class="blog-slider__button">
                                             Download Brochure
-                                        </a>
+                                        </a> */}
                                     </div>
                                 </div>
                             </div>
@@ -94,27 +96,27 @@ const Home = (props) => {
                             <div class="blog-slider__wrp swiper-wrapper">
                                 <div class="blog-slider__item swiper-slide">
                                     <div class="blog-slider__img">
-                                        <img src={PARADISE} />
+                                        <img src={PLAM} />
                                     </div>
                                     <div class="blog-slider__content">
                                         <span class="blog-slider__code">
-                                            Comercial and Residential
+                                          Residential
                                         </span>
                                         <div class="blog-slider__title">
-                                            Marian Paradise Streak
+                                          Plam Streak
                                         </div>
                                         <span class="blog-slider__code">
-                                            Bejai main road, near Bejai Church
+                                            Bejai, mangalore
                                         </span>
-                                        <div class="blog-slider__text">
+                                        {/* <div class="blog-slider__text">
                                             Lorem ipsum dolor sit amet
                                             consectetur, adipisicing elit.
                                             Recusandae voluptate repellendus
                                             magni illo ea animi?{" "}
-                                        </div>
-                                        <a href="#" class="blog-slider__button">
+                                        </div> */}
+                                        {/* <a href="#" class="blog-slider__button">
                                             Download Brochure
-                                        </a>
+                                        </a> */}
                                     </div>
                                 </div>
                             </div>

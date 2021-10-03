@@ -44,27 +44,20 @@ const ContactModal = (props) => {
                             <div className="icon">
                                 <PhoneIcon />{" "}
                             </div>
-                            <div className="text">
-                                +91 709-055-9999 <small>INDIA</small>
-                            </div>
+                            <div className="text">0824 - 4259999</div>
                         </div>
                         <div className="item">
                             <div className="icon">
                                 <PhoneIcon />{" "}
                             </div>
-                            <div className="text">
-                                +1&nbsp;&nbsp; 416-856-9402{" "}
-                                <small>CANADA</small>
-                            </div>
+                            <div className="text">+91 9845125224</div>
                         </div>
 
                         <div className="item">
                             <div className="icon">
                                 <MailIcon />{" "}
                             </div>
-                            <div className="text">
-                                nickypintostudio@gmail.com
-                            </div>
+                            <div className="text">dreamrealizers@gmail.com</div>
                         </div>
 
                         <div className="item">
@@ -72,9 +65,13 @@ const ContactModal = (props) => {
                                 <PinDropIcon />{" "}
                             </div>
                             <div className="text">
-                                <p className="large-text">NP Studio</p>
-                                Behind Retreat House Church, Jeppu, Mangalore -
-                                575002
+                                <p className="large-text">Space</p>
+                                <div>
+                                    Raintree, 2nd Floor, Next to SCS Hospital,
+                                </div>
+                                <div>
+                                    Above Bhima Jewellery, Bendoor, Mangalore 2
+                                </div>
                             </div>
                         </div>
                     </ContactInfo>
@@ -83,7 +80,11 @@ const ContactModal = (props) => {
             <CustomDialogActions>
                 <Button
                     onClick={handleClose}
-                    style={{ color: "#2f75ff", border: "1px solid #2f75ff " }}
+                    style={{
+                        color: "#000",
+                        border: "1px solid #000 ",
+                        "font-weight": "600",
+                    }}
                 >
                     Close
                 </Button>

@@ -29,8 +29,12 @@ const Footer = () => {
                         <div>
                             <div className="title">GET IN TOUCH </div>
                             <div className="address">
-                                <div> Near Hi Spirits, Bendoorwell Circle</div>
-                                <div> Kankanady Post, Mangalore 575 002</div>
+                                <div>
+                                    Raintree, 2nd Floor, Next to SCS Hospital,
+                                </div>
+                                <div>
+                                    Above Bhima Jewellery, Bendoor, Mangalore 2
+                                </div>
                                 <div> Ph: 0824 - 4259999, +91 9845125224</div>
                                 <div> E-mail: dreamrealizers@gmail.com</div>
                             </div>

@@ -5,26 +5,31 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 
 export const CustomDialogTitle = styled(DialogTitle)`
-    background-color: #090c19;
-    color: #fff;
-    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    color: #000;
+    font-weight:600;
+    border-bottom: 1px solid #000;
 `;
 
 export const CustomDialogContent = styled(DialogContent)`
-    background-color: #090c19;
-    color: #fff;
+    background-color: #fff;
+    font-weight:600;
+    color: #000;
     padding: 20px;
 `;
 
 export const CustomDialogActions = styled(DialogActions)`
-    background-color: #090c19;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
+    font-weight:600;
+
 `;
 
 export const DialogContentText = styled.p`
-    color: #fff;
-    opacity: 0.8;
-    font-size: 12px;
+    color: #000;
+    font-size: 14px;
+    font-weight:600;
+
 `;
 
 export const ContactInfo = styled.div`
@@ -32,7 +37,7 @@ export const ContactInfo = styled.div`
     line-height: 1.67;
 
     & .icon {
-        color: #2f75ff;
+        color: #ffcd00;
     }
     & .item {
         display: grid;
@@ -41,7 +46,7 @@ export const ContactInfo = styled.div`
         padding: 10px 20px;
         margin: 10px 0;
 
-        border: 2px solid #2f75ff;
+        border: 2px solid #ffcd00;
         border-radius: 6px;
     }
 
@@ -51,6 +56,6 @@ export const ContactInfo = styled.div`
     }
 
     & small {
-        color: #2f75ff;
+        color: #ffcd00;
     }
 `;

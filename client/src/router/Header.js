@@ -56,7 +56,7 @@ const Header = (props) => {
                 >
                     Register
                 </NavButton> */}
-                <ContactUs onClick={() => updateContactOpen(false)}>
+                <ContactUs onClick={() => updateContactOpen(true)}>
                     Contact us
                 </ContactUs>
             </NavLogin>
