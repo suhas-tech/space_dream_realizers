@@ -10,11 +10,10 @@ import {
     ContactUs,
 } from "./style";
 
-import NP_LOGO from "@images/npLogo.png";
+import LOGO from "@images/logo.png";
 
 import ContactModal from "@components/ContactModal";
 
-import NP from "@svg/NP";
 
 const Header = (props) => {
     const history = useHistory();
@@ -27,11 +26,13 @@ const Header = (props) => {
 
     return (
         <HeaderWrapper>
-            {/* <Logo onClick={() => history.push("/")}>
-                <NP />
-            </Logo> */}
+            <Logo onClick={() => history.push("/")}>
+                {/* <LOGO />
+                     */}
+                     <img src={LOGO}  />
+            </Logo>
 
-            <Nav>
+            {/* <Nav>
                 <NavLink
                     exact
                     className="navLink"
@@ -40,7 +41,7 @@ const Header = (props) => {
                 >
                     Home
                 </NavLink>
-            </Nav>
+            </Nav> */}
 
             <NavLogin>
                 {/* <NavButton
@@ -55,7 +56,7 @@ const Header = (props) => {
                 >
                     Register
                 </NavButton> */}
-                <ContactUs onClick={() => updateContactOpen(true)}>
+                <ContactUs onClick={() => updateContactOpen(false)}>
                     Contact us
                 </ContactUs>
             </NavLogin>

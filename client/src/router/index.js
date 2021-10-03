@@ -13,7 +13,7 @@ const Router = (props) => {
             <PlayArea>
                 <Routes />
             </PlayArea>
-            {/* <Footer /> */}
+            <Footer />
         </React.Fragment>
     );
 };

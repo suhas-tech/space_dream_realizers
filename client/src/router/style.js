@@ -1,16 +1,21 @@
 import styled, { css } from "styled-components";
 
 export const HeaderWrapper = styled.header`
-    background-color: ${(props) => props.theme.colors.primary};
-    color: #fff;
+    // background-color: #FFED01;
+    color: #000;
     display: flex;
+    align-items:center;
     padding: 0 15px;
+    background-color: #fffbe4;
+
 `;
 
 export const Nav = styled.nav`
     .selectedLink {
-        border-bottom: 2px solid ${(props) => props.theme.colors.secondary};
-        color: #fff;
+        // border-bottom: 2px solid ${(props) => props.theme.colors.black};
+        color: #000;
+        display:flex;
+        align-self:center;
     }
 
     display: flex;
@@ -32,22 +37,25 @@ export const Nav = styled.nav`
 `;
 
 export const Logo = styled.div`
-    display: flex;
-    align-items: center;
+    display:flex;
     margin-right: 10px;
     padding: 5px;
-    border: 1px solid #fff;
-    border-radius: 4px;
+    height: 60px;
+    position: absolute;
+    background-color: #fff;
+    top: 20px;
     img {
-        width: 55px;
-        height: 55px;
+        height: 109px;
+        z-index: 3;
     }
 `;
 
 export const FooterWrapper = styled.footer`
     background-color: #000;
+    // background-image: linear-gradient(to bottom right, #f0e49b, #ffcd00);
+    padding: 20px 0;
     color: #fff;
-    min-height: 200px;
+    min-height: 60px;
     position: relative;
     .h-100 {
         height: 100%;
@@ -69,11 +77,11 @@ export const SocialIconsWrapper = styled.div`
 `;
 
 export const CreatedByLabel = styled.p`
-    color: #f4f4ff88;
+    color: #f4f4ff;
 
     font-weight: 600;
     padding-top: 20px;
-
+    opacity: 0.7;
     @media (max-width: 425px) {
         text-align: center;
     }
@@ -81,26 +89,34 @@ export const CreatedByLabel = styled.p`
 
 export const TwoColumnWrapper = styled.div`
     display: grid;
-    grid-template-columns: 180px auto;
+    grid-template-columns: 300px auto;
+    justify-content: space-between;
+
+
     & .one-column {
         display: flex;
         align-items: center;
     }
 
     & .two-column {
-        font-style: italic;
-        display: flex;
-        align-self: center;
-        justify-content: flex-end;
-    }
-    & .footer-logo img {
-        height: 180px;
+        text-align: right;
+        display:flex;
+        align-items:center;
+        & .title {
+            font-weight: 600;
+            font-size: 28px;
+        }
+        & .address {
+            font-size: 20px;
+        }
     }
 
-    & .quotes {
-        font-weight: 600;
-        text-align: right;
-        opacity: 0.7;
+    & .footer-logo img {
+        width: 180px;
+        height: 180px;
+        background-color: #fff;
+        padding: 20px;
+         border-radius: 4px;
     }
 
     @media (max-width: 1080px) {
@@ -108,11 +124,6 @@ export const TwoColumnWrapper = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        & .quotes {
-            margin: 20px 0;
-            text-align: center;
-        }
     }
 `;
 
@@ -143,12 +154,14 @@ export const NavButton = styled.div`
 `;
 
 export const ContactUs = styled.div`
-    border: 1px solid ${(props) => props.theme.colors.white};
-    border-radius: 4px;
+    border: 1px solid ${(props) => props.theme.colors.black};
+    border-radius: 6px;
     padding: 8px 20px;
     margin: 7px 0;
     margin-right: 10px;
     cursor: pointer;
+    height: 25px;
+    font-weight: 600;
 `;
 
 export const PlayArea = styled.div`
