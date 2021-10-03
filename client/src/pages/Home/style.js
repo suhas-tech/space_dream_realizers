@@ -15,7 +15,7 @@ const infiniteScroll = keyframes`
 
 export const Banner = styled.div`
     @media (max-width: 767px) {
-        padding-top: 40px;
+        padding-top: 65px;
     }
     display: flex;
     justify-content: center;

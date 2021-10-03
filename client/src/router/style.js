@@ -4,10 +4,9 @@ export const HeaderWrapper = styled.header`
     // background-color: #FFED01;
     color: #000;
     display: flex;
-    align-items:center;
+    align-items: center;
     padding: 0 15px;
     background-color: #fffbe4;
-
 `;
 
 export const Nav = styled.nav`
@@ -37,7 +36,7 @@ export const Nav = styled.nav`
 `;
 
 export const Logo = styled.div`
-    display:flex;
+    display: flex;
     margin-right: 10px;
     padding: 5px;
     height: 60px;
@@ -92,7 +91,6 @@ export const TwoColumnWrapper = styled.div`
     grid-template-columns: 300px auto;
     justify-content: space-between;
 
-
     & .one-column {
         display: flex;
         align-items: center;
@@ -100,8 +98,8 @@ export const TwoColumnWrapper = styled.div`
 
     & .two-column {
         text-align: right;
-        display:flex;
-        align-items:center;
+        display: flex;
+        align-items: center;
         & .title {
             font-weight: 600;
             font-size: 28px;
@@ -116,7 +114,7 @@ export const TwoColumnWrapper = styled.div`
         height: 180px;
         background-color: #fff;
         padding: 20px;
-         border-radius: 4px;
+        border-radius: 4px;
     }
 
     @media (max-width: 1080px) {
@@ -127,8 +125,8 @@ export const TwoColumnWrapper = styled.div`
 
         & .two-column {
             text-align: center;
-            display:flex;
-            align-items:center;
+            display: flex;
+            align-items: center;
             & .title {
                 font-weight: 600;
                 font-size: 28px;
