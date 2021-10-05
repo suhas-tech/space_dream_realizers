@@ -35,7 +35,7 @@ const Footer = () => {
                                 <div>
                                     Above Bhima Jewellery, Bendoor, Mangalore 2
                                 </div>
-                                <div> Ph: 0824 - 4259999, +91 9845125224</div>
+                                <div> Ph: 0824 - 4259999, +91 70904 49999</div>
                                 <div> E-mail: dreamrealizers@gmail.com</div>
                             </div>
                         </div>

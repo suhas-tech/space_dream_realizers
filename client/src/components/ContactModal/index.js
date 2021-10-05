@@ -50,7 +50,7 @@ const ContactModal = (props) => {
                             <div className="icon">
                                 <PhoneIcon />{" "}
                             </div>
-                            <div className="text">+91 9845125224</div>
+                            <div className="text">+91 70904 49999</div>
                         </div>
 
                         <div className="item">

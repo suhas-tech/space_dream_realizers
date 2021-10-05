@@ -12,7 +12,7 @@ import {
 
 import CONS from "@svg/Construction";
 import PARADISE from "@images/paradise.jpg";
-import PLAM from "@images/plamStreak.jpg";
+import PLAM from "@images/plamStreak.jpeg";
 
 
 const Home = (props) => {
@@ -103,7 +103,7 @@ const Home = (props) => {
                                           Residential
                                         </span>
                                         <div class="blog-slider__title">
-                                          Plam Streak
+                                        Northern Sky   Plam Streak
                                         </div>
                                         <span class="blog-slider__code">
                                             Bejai, mangalore
