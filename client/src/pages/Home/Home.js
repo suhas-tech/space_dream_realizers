@@ -1,129 +1,274 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Container } from "@theme/common";
+
+import Banner from "./Banner";
+
 import {
-    Banner,
-    TextUnderConstruction,
-    BetterExp,
-    ConstrcutionSection,
-    BuildingSection,
-    ProjectInfo,
+    SplitConatiner,
+    FloorInfoButton,
+    FloorInfoButtonWrapper,
+    AmenitiesSection,
+    AmenitiesIcons,
+    ViewMoreWrapper,
 } from "./style";
 
-import CONS from "@svg/Construction";
-import PARADISE from "@images/paradise.jpg";
-import PLAM from "@images/plamStreak.jpeg";
+import Plam_Streak from "@images/Plam_Streak.png";
+import Paradise_streak from "@images/Paradise_streak.png";
+import PlamText from "./PlamText";
+import ParadiseText from "./ParadiseText";
+import Location from "../../svg/Location";
+import FloorPlan from "../../svg/FloorPlan";
+import Arrow from "../../svg/Arrow";
+import FloorSize from "../../svg/FloorSize";
 
+import KidsPool from "./Icons/KidsPool";
+import PlayArea from "./Icons/PlayArea";
+import MainPool from "./Icons/MainPool";
+import Seating from "./Icons/Seating";
 
+import ContactForm from "./ContactForm";
+import Carousel from "./Carousel";
+import FloorPlanModal from "./FloorPlanModal";
+import FloorSizeModal from "./FloorSizeModal";
+
+import PLAM_FLOOR_PLAN from "@images/plam_floor_plan.jpg";
+import PARADISE_FLOOR_PLAN_1 from "@images/paradise_floor_1.jpg";
+import PARADISE_FLOOR_PLAN_2 from "@images/paradise_floor_2.jpg";
+import PARADISE_FLOOR_PLAN_3 from "@images/paradise_floor_3.jpg";
+
+import config from "./config.json";
+
+console.log(config, "config");
 const Home = (props) => {
+    const [floorPlanData, updateFloorPlanData] = useState(null);
+
+    const [floorSizeData, updateFloorSizeData] = useState(null);
+
     return (
         <React.Fragment>
-            <Banner>
-                <div className="example-box">
-                    <div class="background-shapes"></div>
-                    <TextUnderConstruction>
-                        The site is under Construction
-                    </TextUnderConstruction>
-                    <BetterExp>
-                        We are coming soon with better experience to our site.
-                        <div> We are here to fullfill your dreams </div>
-                    </BetterExp>
-                    <div className="image">
-                        <CONS />
+            <Banner />
+
+            <SplitConatiner className="bg-white">
+                <Container>
+                    <div className="image-container">
+                        <img src={Plam_Streak} />
                     </div>
-                </div>
-            </Banner>
-            <ProjectInfo>
-                {" "}
-                <div>AVAILABLE PROJECTS </div>{" "}
-            </ProjectInfo>
-            <ConstrcutionSection className="bg-white">
-                <Container>
-                    {/* <div className="content-area">
-                        <div className="imageSection">
-                            <img src={PARADISE} />
+                    <div className="content grey-background">
+                        <div className="title">
+                            <PlamText />
                         </div>
-                    </div> */}
+                        <div className="location">
+                            <div className="location-icon">
+                                <Location />
+                            </div>
+                            <div>Bejai, Mangalore</div>
+                        </div>
+                        <div className="floor-count-wrapper">
+                            <div>NO OF FLOORS</div>
+                            <div className="floor-count">9</div>
+                        </div>
+                        <FloorInfoButtonWrapper>
+                            <FloorInfoButton
+                                onClick={() => {
+                                    updateFloorPlanData({
+                                        title: "Plam Floor plan",
+                                        data: [
+                                            {
+                                                label: "typical floor plan",
+                                                img: PLAM_FLOOR_PLAN,
+                                            },
+                                        ],
+                                    });
+                                }}
+                            >
+                                <div className="icon-left">
+                                    <FloorPlan />
+                                </div>
 
-                    <BuildingSection>
-                        <div class="blog-slider">
-                            <div class="blog-slider__wrp swiper-wrapper">
-                                <div class="blog-slider__item swiper-slide">
-                                    <div class="blog-slider__img">
-                                        {/* <img
-                                    src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg"
-                                    alt=""
-                                /> */}
+                                <div className="text">FLOOR PLAN</div>
+                                <div className="icon-arrow">
+                                    <Arrow />
+                                </div>
+                            </FloorInfoButton>
+                            <FloorInfoButton
+                                onClick={() => {
+                                    updateFloorSizeData(
+                                        config.PLAM_STREAK_SIZE
+                                    );
+                                }}
+                            >
+                                <div className="icon-left">
+                                    <FloorSize />
+                                </div>
 
-                                        <img src={PARADISE} />
+                                <div className="text">FLOOR SIZE</div>
+                                <div className="icon-arrow">
+                                    <Arrow />
+                                </div>
+                            </FloorInfoButton>
+                        </FloorInfoButtonWrapper>
+                        <AmenitiesSection>
+                            <div className="title">AMENITIES</div>
+                            <AmenitiesIcons>
+                                <div className="icon-wrapper">
+                                    <div className="icon">
+                                        <KidsPool />
                                     </div>
-                                    <div class="blog-slider__content">
-                                        <span class="blog-slider__code">
-                                            Comercial and Residential
-                                        </span>
-                                        <div class="blog-slider__title">
-                                            Marian Paradise Streak
-                                        </div>
-                                        <span class="blog-slider__code">
-                                            Bejai main road, near Bejai Church
-                                        </span>
-                                        {/* <div class="blog-slider__text">
-                                            Lorem ipsum dolor sit amet
-                                            consectetur, adipisicing elit.
-                                            Recusandae voluptate repellendus
-                                            magni illo ea animi?{" "}
-                                        </div> */}
-                                        {/* <a href="#" class="blog-slider__button">
-                                            Download Brochure
-                                        </a> */}
+                                    <div className="icon-text">Kids Pool</div>
+                                </div>
+                                <div className="icon-wrapper">
+                                    <div className="icon">
+                                        <PlayArea />
+                                    </div>
+                                    <div className="icon-text">Play Area</div>
+                                </div>
+
+                                <div className="icon-wrapper">
+                                    <div className="icon">
+                                        <MainPool />
+                                    </div>
+                                    <div className="icon-text">Main Pool</div>
+                                </div>
+
+                                <div className="icon-wrapper">
+                                    <div className="icon">
+                                        <Seating />
+                                    </div>
+                                    <div className="icon-text">
+                                        Seating Area
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </BuildingSection>
-                </Container>
-            </ConstrcutionSection>
-            <ConstrcutionSection>
-                <Container>
-                    {/* <div className="content-area">
-                        <div className="imageSection">
-                            <img src={PARADISE} />
-                        </div>
-                    </div> */}
 
-                    <BuildingSection>
-                        <div class="blog-slider">
-                            <div class="blog-slider__wrp swiper-wrapper">
-                                <div class="blog-slider__item swiper-slide">
-                                    <div class="blog-slider__img">
-                                        <img src={PLAM} />
+                                <ViewMoreWrapper>
+                                    <div className="count">+14</div>
+                                    <div className="more-text">More</div>
+                                    <div className="link">View more</div>
+                                </ViewMoreWrapper>
+                            </AmenitiesIcons>
+                        </AmenitiesSection>
+                    </div>
+                </Container>
+            </SplitConatiner>
+            <SplitConatiner className="bg-grey">
+                <Container>
+                    <div className="image-container grey-background">
+                        <img src={Paradise_streak} />
+                    </div>
+                    <div className="content ">
+                        <div className="title">
+                            <ParadiseText />
+                        </div>
+                        <div className="location">
+                            <div className="location-icon">
+                                <Location />
+                            </div>
+                            <div>Bejai, Mangalore</div>
+                        </div>
+                        <div className="floor-count-wrapper">
+                            <div>NO OF FLOORS</div>
+                            <div className="floor-count">9</div>
+                        </div>
+                        <FloorInfoButtonWrapper>
+                            <FloorInfoButton
+                                onClick={() => {
+                                    updateFloorPlanData({
+                                        title: "Paradise Floor plan",
+                                        data: [
+                                            {
+                                                label: "typical floor plan",
+                                                img: PARADISE_FLOOR_PLAN_1,
+                                            },
+                                            {
+                                                label: "typical floor plan",
+                                                img: PARADISE_FLOOR_PLAN_2,
+                                            },
+                                            {
+                                                label: "typical floor plan",
+                                                img: PARADISE_FLOOR_PLAN_3,
+                                            },
+                                        ],
+                                    });
+                                }}
+                            >
+                                <div className="icon-left">
+                                    <FloorPlan />
+                                </div>
+
+                                <div className="text">FLOOR PLAN</div>
+                                <div className="icon-arrow">
+                                    <Arrow />
+                                </div>
+                            </FloorInfoButton>
+                            <FloorInfoButton>
+                                <div className="icon-left">
+                                    <FloorSize />
+                                </div>
+
+                                <div className="text">FLOOR SIZE</div>
+                                <div className="icon-arrow">
+                                    <Arrow />
+                                </div>
+                            </FloorInfoButton>
+                        </FloorInfoButtonWrapper>
+                        <AmenitiesSection>
+                            <div className="title">AMENITIES</div>
+                            <AmenitiesIcons>
+                                <div className="icon-wrapper">
+                                    <div className="icon">
+                                        <KidsPool />
                                     </div>
-                                    <div class="blog-slider__content">
-                                        <span class="blog-slider__code">
-                                          Residential
-                                        </span>
-                                        <div class="blog-slider__title">
-                                        Northern Sky   Plam Streak
-                                        </div>
-                                        <span class="blog-slider__code">
-                                            Bejai, mangalore
-                                        </span>
-                                        {/* <div class="blog-slider__text">
-                                            Lorem ipsum dolor sit amet
-                                            consectetur, adipisicing elit.
-                                            Recusandae voluptate repellendus
-                                            magni illo ea animi?{" "}
-                                        </div> */}
-                                        {/* <a href="#" class="blog-slider__button">
-                                            Download Brochure
-                                        </a> */}
+                                    <div className="icon-text">Kids Pool</div>
+                                </div>
+                                <div className="icon-wrapper">
+                                    <div className="icon">
+                                        <PlayArea />
+                                    </div>
+                                    <div className="icon-text">Play Area</div>
+                                </div>
+
+                                <div className="icon-wrapper">
+                                    <div className="icon">
+                                        <MainPool />
+                                    </div>
+                                    <div className="icon-text">Main Pool</div>
+                                </div>
+
+                                <div className="icon-wrapper">
+                                    <div className="icon">
+                                        <Seating />
+                                    </div>
+                                    <div className="icon-text">
+                                        Seating Area
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </BuildingSection>
+
+                                <ViewMoreWrapper>
+                                    <div className="count">+14</div>
+                                    <div className="more-text">More</div>
+                                    <div className="link">View more</div>
+                                </ViewMoreWrapper>
+                            </AmenitiesIcons>
+                        </AmenitiesSection>
+                    </div>
                 </Container>
-            </ConstrcutionSection>
+            </SplitConatiner>
+            <ContactForm />
+            <Carousel />
+            {floorPlanData && (
+                <FloorPlanModal
+                    open={!!floorPlanData}
+                    data={floorPlanData}
+                    handleClose={() => updateFloorPlanData(null)}
+                />
+            )}
+              {floorSizeData && (
+                <FloorSizeModal
+                    open={!!floorSizeData}
+                    data={floorSizeData}
+                    handleClose={() => updateFloorSizeData(null)}
+                />
+            )}
         </React.Fragment>
     );
 };

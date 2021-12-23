@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.header`
     display: flex;
     align-items: center;
     padding: 0 15px;
-    background-color: #fffbe4;
+    // background-color: #fffbe4;
 `;
 
 export const Nav = styled.nav`
@@ -35,14 +35,14 @@ export const Nav = styled.nav`
     }
 `;
 
-export const Logo = styled.div`
+export const LogoWrapper = styled.div`
     display: flex;
     margin-right: 10px;
     padding: 5px;
     height: 60px;
-    position: absolute;
-    background-color: #fff;
-    top: 20px;
+    // position: absolute;
+    // background-color: #fff;
+    // top: 20px;
     img {
         height: 109px;
         z-index: 3;
@@ -177,4 +177,11 @@ export const ContactUs = styled.div`
 
 export const PlayArea = styled.div`
     min-height: calc(100vh - 260px);
+`;
+
+export const TextWrapper = styled.div`
+    display:flex;
+    flex-direction: column;
+    
+
 `;

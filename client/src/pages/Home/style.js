@@ -81,6 +81,13 @@ export const BetterExp = styled.div`
     text-align: center;
 `;
 
+export const CarouselWrapper = styled.div`
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+`;
+
 export const TextUnderConstruction = styled.div`
     font-size: 28px;
     color: black;
@@ -251,7 +258,6 @@ export const BuildingSection = styled.div`
                 margin-top: -207px;
                 text-align: center;
                 padding: 30px 30px;
-             
             }
 
             @media screen and (max-width: 576px) {
@@ -285,7 +291,6 @@ export const BuildingSection = styled.div`
                 color: #0d0925;
                 margin-bottom: 5px;
             }
-         
         }
 
         &__text {
@@ -307,7 +312,7 @@ export const BuildingSection = styled.div`
             text-align: center;
             letter-spacing: 1px;
             @media screen and (max-width: 576px) {
-              margin-bottom: 20px;
+                margin-bottom: 20px;
             }
         }
         .swiper-container-horizontal > .swiper-pagination-bullets,
@@ -364,5 +369,247 @@ export const BuildingSection = styled.div`
                 }
             }
         }
+    }
+`;
+
+export const SplitConatiner = styled.div`
+    &.bg-white {
+        background-color: #fff;
+    }
+
+    &.bg-grey {
+        background-color: #ededed;
+    }
+   & > div {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: 300px;
+   } 
+    & .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    & .grey-background {
+        // background-color: #ededed;
+    }
+
+    & .content {
+        padding: 20px;
+    }
+
+    & img {
+        width: 300px;
+        height: 300px;
+        padding: 30px 0;
+    }
+
+    & .title svg {
+        height: 28px;
+    }
+
+    & .location {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+    }
+
+    & .location-icon {
+        margin-right: 10px;
+    }
+
+    & .floor-count-wrapper {
+        display: flex;
+        font-weight: 600;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    & .floor-count {
+        display: flex;
+        border: 2px solid #2980ba;
+        margin-left: 10px;
+        border-radius: 50%;
+        padding: 6px;
+        height: 20px;
+        width: 20px;
+        justify-content: center;
+    }
+`;
+
+export const FloorInfoButton = styled.div`
+    padding: 6px 6px;
+    background-color: #fff;
+    color: #2980ba;
+    border: 2px solid #2980ba;
+    display: flex;
+    // max-width: 300px;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+    }
+    & .icon-left {
+        margin-right: 6px;
+        display: flex;
+        align-items: center;
+    }
+
+    & .text {
+        font-weight: 600;
+    }
+
+    & .icon-arrow {
+        margin-left: 6px;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    &:hover .icon-arrow {
+        position: relative;
+        left: 4px;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+`;
+
+export const FloorInfoButtonWrapper = styled.div`
+    display: flex;
+`;
+
+export const AmenitiesSection = styled.div`
+    margin-top: 20px;
+    & .title {
+        font-size: 20px;
+        color: #404040;
+        font-weight: 600;
+    }
+`;
+
+export const AmenitiesIcons = styled.div`
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px 100px;
+
+    grid-gap: 10px;
+    & .icon-wrapper {
+    }
+
+    & .icon {
+    }
+
+    & .icon-text {
+        font-size: 14px;
+        // text-align:center;
+    }
+`;
+
+export const ViewMoreWrapper = styled.div`
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    & .count {
+        font-size: 30px;
+    }
+
+    & .more-text {
+        font-size: 24px;
+    }
+
+    & .link {
+        color: #0e4da4;
+        text-decoration: underline;
+    }
+`;
+
+export const ContactBackground = styled.div`
+    background-color: #00062b;
+    min-height: 400px;
+`;
+
+export const ContactFormWrapper = styled.div`
+    padding: 20px;
+
+    & .title {
+        font-size: 40px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 600;
+    }
+`;
+
+export const Label = styled.p`
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0;
+    color: #fff;
+`;
+
+export const Input = styled.input`
+    background-color: #fff;
+    font-size: 22px;
+    min-width: 400px;
+    padding: 6px;
+`;
+
+export const FormGrid = styled.div`
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-gap: 20px 40px;
+`;
+
+export const CheckBoxSection = styled.div`
+    padding: 6px 0;
+    & .MuiFormControlLabel-root {
+        color: #fff;
+    }
+    & .MuiButtonBase-root {
+        color: #fff;
+    }
+`;
+
+export const CarouselSection = styled.div`
+    & .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    & .title .text {
+        font-size: 28px;
+        font-weight: 600;
+    }
+`;
+
+export const CarouselItem = styled.div`
+    position: relative;
+    & .label {
+        position: absolute;
+        font-size: 20px;
+        background-color: #ffffffd9;
+        padding: 6px 15px;
+        bottom: 20px;
+        right: 0;
+        font-weight: 600;
+    }
+`;
+
+export const ImageHolder = styled.div`
+    height: 57vh;
+    & img {
+        width: 100%;
+        height: 100%;
+        max-height: 57vh;
     }
 `;

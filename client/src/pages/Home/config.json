@@ -1,0 +1,94 @@
+{
+    "PLAM_STREAK_SIZE" : [
+        {
+            "unit": "1",
+            "type": "3 BHK",
+            "area": "1685 sft"
+        },
+        {
+            "unit": "2",
+            "type": "2 BHK",
+            "area": "1330 sft"
+        },
+        {
+            "unit": "3",
+            "type": "2 BHK",
+            "area": "1040 sft"
+        },
+        {
+            "unit": "4",
+            "type": "2 BHK",
+            "area": "1220 sft"
+        },
+        {
+            "unit": "5",
+            "type": "3 BHK",
+            "area": "1680 sft"
+        },
+        {
+            "unit": "6",
+            "type": "2 BHK",
+            "area": "1265 sft"
+        },{
+            "unit": "7",
+            "type": "2 BHK",
+            "area": "1300 sft"
+        },
+        {
+            "unit": "8",
+            "type": "3 BHK",
+            "area": "1685 sft"
+        },
+        {
+            "unit": "9",
+            "type": "3 BHK",
+            "area": "1395 sft"
+        }
+    ],
+    "PARADISE_STREAK_SIZE" : [
+        {
+            "unit": "1",
+            "type": "3 BHK",
+            "area": "1685 sft"
+        },
+        {
+            "unit": "2",
+            "type": "2 BHK",
+            "area": "1330 sft"
+        },
+        {
+            "unit": "3",
+            "type": "2 BHK",
+            "area": "1040 sft"
+        },
+        {
+            "unit": "4",
+            "type": "2 BHK",
+            "area": "1220 sft"
+        },
+        {
+            "unit": "5",
+            "type": "3 BHK",
+            "area": "1680 sft"
+        },
+        {
+            "unit": "6",
+            "type": "2 BHK",
+            "area": "1265 sft"
+        },{
+            "unit": "7",
+            "type": "2 BHK",
+            "area": "1300 sft"
+        },
+        {
+            "unit": "8",
+            "type": "3 BHK",
+            "area": "1685 sft"
+        },
+        {
+            "unit": "9",
+            "type": "3 BHK",
+            "area": "1395 sft"
+        }
+    ]
+}

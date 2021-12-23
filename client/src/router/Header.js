@@ -4,17 +4,21 @@ import { BrowserRouter as Router, NavLink, useHistory } from "react-router-dom";
 import {
     HeaderWrapper,
     Nav,
-    Logo,
+    LogoWrapper,
     NavLogin,
     NavButton,
     ContactUs,
+    TextWrapper
 } from "./style";
 
 import LOGO from "@images/logo.png";
 
 import ContactModal from "@components/ContactModal";
+import Logo from "../svg/Logo";
+import Space from "../svg/Space";
+import Dream from "../svg/Dream";
 
-
+// Dream
 const Header = (props) => {
     const history = useHistory();
 
@@ -26,36 +30,16 @@ const Header = (props) => {
 
     return (
         <HeaderWrapper>
-            <Logo onClick={() => history.push("/")}>
-                {/* <LOGO />
-                     */}
-                     <img src={LOGO}  />
-            </Logo>
+            <LogoWrapper onClick={() => history.push("/")}>
+                <Logo />
+            </LogoWrapper>
 
-            {/* <Nav>
-                <NavLink
-                    exact
-                    className="navLink"
-                    activeClassName="selectedLink"
-                    to="/"
-                >
-                    Home
-                </NavLink>
-            </Nav> */}
+            <TextWrapper>
+                <Space />
+                <Dream/>
+            </TextWrapper>
 
             <NavLogin>
-                {/* <NavButton
-                    onClick={() => history.push("/login")}
-                    className="login"
-                >
-                    Sign in 
-                </NavButton>
-                <NavButton
-                    onClick={() => history.push("/register")}
-                    className="register"
-                >
-                    Register
-                </NavButton> */}
                 <ContactUs onClick={() => updateContactOpen(true)}>
                     Contact us
                 </ContactUs>
