@@ -5,6 +5,8 @@ const path = require("path");
 const mongoose = require("mongoose");
 var http = require("http");
 
+const userRoutes = require("./routes/user")
+
 const app = express();
 var cors = require("cors");
 app.use(cors());
@@ -23,6 +25,8 @@ app.use(cookieParser());
 //   }
 // });
 
+app.use(userRoutes);
+
 app.use(express.static(path.join(__dirname, "../client", "build")));
 
 app.get("/files/:id", function (req, res) {
@@ -35,5 +39,5 @@ app.get("/*", function (req, res) {
 
 const port = 4001;
 app.listen(port, () => {
-  console.log("listening at port 4000");
+  console.log("listening at port " + port);
 });

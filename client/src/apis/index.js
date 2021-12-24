@@ -3,8 +3,8 @@ import qs from "qs";
 
 let baseUrl = "";
 
-if (window.location.origin === "http://localhost:8080") {
-    baseUrl = "http://localhost:1234";
+if (window.location.origin === "https://localhost:9000") {
+    baseUrl = "http://localhost:4001";
 }
 
 export const post = (payload) => {

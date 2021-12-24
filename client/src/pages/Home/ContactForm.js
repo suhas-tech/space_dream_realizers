@@ -16,14 +16,16 @@ import {
     CheckBoxSection,
 } from "./style";
 
+import {submitContactRequest} from "../../apis/contact";
+
 const ContactForm = () => {
     const DataConfig = {
         name: "",
         mail: "",
         phone: "",
-        mailMe: false,
-        callMe: false,
-        whatsappMe: false,
+        // mailMe: false,
+        // callMe: false,
+        // whatsappMe: false,
     };
 
     const [data, updateData] = useState(DataConfig);
@@ -36,6 +38,11 @@ const ContactForm = () => {
             [name]: value,
         });
     };
+
+    const submit = async () => {
+        const result = await submitContactRequest(data);
+        console.log(result);
+    }
 
     return (
         <ContactBackground>
@@ -136,7 +143,7 @@ const ContactForm = () => {
                         </CheckBoxSection> */}
                     </div>
                     <div className="footer">
-                        <Button  variant="contained" color="primary">
+                        <Button  variant="contained" color="primary" onClick={submit}>
                             Submit
                         </Button>
                     </div>

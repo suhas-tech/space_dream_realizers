@@ -1,5 +1,19 @@
-const User = require("./models/user");
+const User = require("../models/user");
 const jwt = require("jsonwebtoken");
+const nodemailer = require("nodemailer");
+
+const smtpEndpoint = "email-smtp.us-west-2.amazonaws.com";
+
+const port = 587;
+
+const senderAddress = "suhas0313@gmail.com";
+
+var toAddresses = "dreamrealizers@gmail.com";
+
+const smtpUsername = "AKIA3AQCBXPQ2MBOIC32";
+
+// Replace smtp_password with your Amazon SES SMTP password.
+const smtpPassword = "BFKWnOuGuho1/6dUqGFebiSTHsAkFs5+YEMew2gNlM4g";
 
 exports.register = async (req, res) => {
   const { email, password } = req.body;
@@ -53,4 +67,47 @@ exports.authenticate = async (req, res) => {
       });
     }
   });
+};
+
+exports.submitContactRequest = async (req, res) => {
+  try {
+
+  let transporter = nodemailer.createTransport({
+    host: smtpEndpoint,
+    port: port,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: smtpUsername,
+      pass: smtpPassword,
+    },
+  });
+
+  var body_html = `<html>
+<head></head>
+<body>
+  <h1>Amazon SES Test (Nodemailer)</h1>
+  <p>This email was sent with <a href='https://aws.amazon.com/ses/'>Amazon SES</a>
+        using <a href='https://nodemailer.com'>Nodemailer</a> for Node.js.</p>
+</body>
+</html>`;
+
+  let mailOptions = {
+    from: senderAddress,
+    to: toAddresses,
+    subject: "Contact Request submitted",
+    html: body_html,
+
+    headers: {
+      "X-SES-CONFIGURATION-SET": "ConfigSet",
+      // 'X-SES-MESSAGE-TAGS': tag0,
+      // 'X-SES-MESSAGE-TAGS': tag1
+    },
+  };
+    let info = await transporter.sendMail(mailOptions);
+    console.log(info);
+    res.send(info);
+  } catch (err) {
+    console.log(err);
+    res.send(err);
+  }
 };
