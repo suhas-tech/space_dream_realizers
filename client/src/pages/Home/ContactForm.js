@@ -79,7 +79,7 @@ const ContactForm = () => {
                                 />
                             </div>
                         </FormGrid>
-                        <CheckBoxSection>
+                        {/* <CheckBoxSection>
                             <Label> Reach me out through </Label>
                                 <FormGroup row>
                                     <FormControlLabel
@@ -133,10 +133,10 @@ const ContactForm = () => {
                                         label="Whastapp Me"
                                     />
                                 </FormGroup>
-                        </CheckBoxSection>
+                        </CheckBoxSection> */}
                     </div>
                     <div className="footer">
-                        <Button style={{"min-width": "300px"}} variant="contained" color="primary">
+                        <Button  variant="contained" color="primary">
                             Submit
                         </Button>
                     </div>

@@ -380,11 +380,32 @@ export const SplitConatiner = styled.div`
     &.bg-grey {
         background-color: #ededed;
     }
-   & > div {
-    display: grid;
-    grid-template-columns: 45% 55%;
-    min-height: 300px;
-   } 
+    & > div {
+        display: grid;
+        grid-template-columns: 45% 55%;
+        min-height: 300px;
+    }
+
+    @media (max-width: 1180px) {
+    }
+    @media (max-width: 980px) {
+    }
+    @media (max-width: 880px) {
+        & > div {
+            display: block;
+        }
+    }
+    @media (max-width: 768px) {
+        & > div {
+            display: block;
+        }
+    }
+    @media (max-width: 500px) {
+        & > div {
+            display: block;
+        }
+    }
+
     & .image-container {
         display: flex;
         justify-content: center;
@@ -406,6 +427,10 @@ export const SplitConatiner = styled.div`
 
     & .title svg {
         height: 28px;
+
+        @media (max-width: 500px) {
+            height: 16px;
+        }
     }
 
     & .location {
@@ -452,7 +477,7 @@ export const FloorInfoButton = styled.div`
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
+    justify-content: space-between;
     &:hover {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
     }
@@ -482,6 +507,9 @@ export const FloorInfoButton = styled.div`
 
 export const FloorInfoButtonWrapper = styled.div`
     display: flex;
+    @media (max-width: 500px) {
+        display: block;
+    }
 `;
 
 export const AmenitiesSection = styled.div`
@@ -507,6 +535,14 @@ export const AmenitiesIcons = styled.div`
     & .icon-text {
         font-size: 14px;
         // text-align:center;
+    }
+
+    @media (max-width: 500px) {
+        grid-template-columns: 100px 100px 100px;
+    }
+
+    @media (max-width: 321px) {
+        grid-template-columns: 100px 100px;
     }
 `;
 
@@ -545,7 +581,22 @@ export const ContactFormWrapper = styled.div`
         text-transform: uppercase;
         color: #fff;
         font-weight: 600;
+
+        @media (max-width: 500px) {
+            font-size: 20px;
+        }
     }
+
+    & .footer {
+        margin-top: 15px;
+
+        > button {
+            max-width: 250px;
+            width: 100%;
+        }
+    }
+
+   
 `;
 
 export const Label = styled.p`
@@ -560,12 +611,18 @@ export const Input = styled.input`
     font-size: 22px;
     min-width: 400px;
     padding: 6px;
+    @media (max-width: 500px) {
+        min-width: 100%;
+    }
 `;
 
 export const FormGrid = styled.div`
     display: grid;
     grid-template-columns: 400px 400px;
     grid-gap: 20px 40px;
+    @media (max-width: 767px) {
+        display:block;
+    }
 `;
 
 export const CheckBoxSection = styled.div`
@@ -589,6 +646,11 @@ export const CarouselSection = styled.div`
     & .title .text {
         font-size: 28px;
         font-weight: 600;
+
+        @media (max-width: 500px) {
+            font-size: 24px;
+
+        }
     }
 `;
 
@@ -602,7 +664,13 @@ export const CarouselItem = styled.div`
         bottom: 20px;
         right: 0;
         font-weight: 600;
+
+        @media (max-width: 500px) {
+            font-size: 14px;
+        }
     }
+
+   
 `;
 
 export const ImageHolder = styled.div`

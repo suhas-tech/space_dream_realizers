@@ -182,6 +182,8 @@ export const PlayArea = styled.div`
 export const TextWrapper = styled.div`
     display:flex;
     flex-direction: column;
-    
+    @media (max-width: 500px) {
+       display:none;
+    }
 
 `;
