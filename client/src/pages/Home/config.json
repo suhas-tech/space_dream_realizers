@@ -1,5 +1,5 @@
 {
-    "PLAM_STREAK_SIZE" : [
+    "PLAM_STREAK_SIZE": [
         {
             "unit": "1",
             "type": "3 BHK",
@@ -29,7 +29,8 @@
             "unit": "6",
             "type": "2 BHK",
             "area": "1265 sft"
-        },{
+        },
+        {
             "unit": "7",
             "type": "2 BHK",
             "area": "1300 sft"
@@ -45,50 +46,96 @@
             "area": "1395 sft"
         }
     ],
-    "PARADISE_STREAK_SIZE" : [
+    "PARADISE_STREAK_SIZE": [
         {
-            "unit": "1",
+            "unit": "Shop no 1",
+            "type": "",
+            "area": "790 sft"
+        },
+        {
+            "unit": "Shop no 2",
+            "type": "",
+            "area": "275 sft"
+        },
+        {
+            "unit": "Shop no 3",
+            "type": "",
+            "area": "305 sft"
+        },
+        {
+            "unit": "Shop no 4",
+            "type": "",
+            "area": "300 sft"
+        },
+        {
+            "unit": "Shop no 5",
+            "type": "",
+            "area": "290 sft"
+        },
+        {
+            "unit": "Shop no 6",
+            "type": "",
+            "area": "410 sft"
+        },
+        {
+            "unit": "Shop no 7",
+            "type": "",
+            "area": "240 sft"
+        },
+        {
+            "unit": "Shop no 8",
+            "type": "",
+            "area": "245 sft"
+        },
+        {
+            "unit": "Shop no 9",
+            "type": "",
+            "area": "370 sft"
+        },
+        {
+            "unit": "Shop no 10",
+            "type": "",
+            "area": "380 sft"
+        },
+        {
+            "unit": "Shop no 11",
+            "type": "",
+            "area": "530 sft"
+        },
+        {
+            "unit": "Shop no 12",
+            "type": "",
+            "area": "950 sft"
+        },
+        {
+            "unit": "Flat 1",
+            "type": "2 BHK",
+            "area": "1270 sft"
+        },
+        {
+            "unit": "Flat 2",
+            "type": "2 BHK",
+            "area": "1135 sft"
+        },
+        {
+            "unit": "Flat 3",
+            "type": "2 BHK",
+            "area": "1130 sft"
+        },
+        {
+            "unit": "Flat 4",
             "type": "3 BHK",
-            "area": "1685 sft"
+            "area": "1630 sft"
         },
         {
-            "unit": "2",
+            "unit": "Flat 5",
             "type": "2 BHK",
-            "area": "1330 sft"
+            "area": "1130 sft"
         },
         {
-            "unit": "3",
+            "unit": "Flat 6",
             "type": "2 BHK",
-            "area": "1040 sft"
-        },
-        {
-            "unit": "4",
-            "type": "2 BHK",
-            "area": "1220 sft"
-        },
-        {
-            "unit": "5",
-            "type": "3 BHK",
-            "area": "1680 sft"
-        },
-        {
-            "unit": "6",
-            "type": "2 BHK",
-            "area": "1265 sft"
-        },{
-            "unit": "7",
-            "type": "2 BHK",
-            "area": "1300 sft"
-        },
-        {
-            "unit": "8",
-            "type": "3 BHK",
-            "area": "1685 sft"
-        },
-        {
-            "unit": "9",
-            "type": "3 BHK",
-            "area": "1395 sft"
+            "area": "1270 sft"
         }
     ]
 }

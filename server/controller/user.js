@@ -71,7 +71,7 @@ exports.authenticate = async (req, res) => {
 
 exports.submitContactRequest = async (req, res) => {
   try {
-
+    const {name, number, mail} = req.body
   let transporter = nodemailer.createTransport({
     host: smtpEndpoint,
     port: port,
@@ -82,20 +82,21 @@ exports.submitContactRequest = async (req, res) => {
     },
   });
 
-  var body_html = `<html>
-<head></head>
-<body>
-  <h1>Amazon SES Test (Nodemailer)</h1>
-  <p>This email was sent with <a href='https://aws.amazon.com/ses/'>Amazon SES</a>
-        using <a href='https://nodemailer.com'>Nodemailer</a> for Node.js.</p>
-</body>
-</html>`;
+  // var body_html = ``;
 
   let mailOptions = {
     from: senderAddress,
     to: toAddresses,
     subject: "Contact Request submitted",
-    html: body_html,
+    html: `<html>
+    <head></head>
+    <body>
+      <h1>A request has been posted.</h1>
+      <div>  Name: ${name} </div>
+      <div>  Contact: ${number} </div>
+      <div>  Mail: ${mail} </div>
+    </body>
+    </html>`,
 
     // headers: {
     //   "X-SES-CONFIGURATION-SET": "ConfigSet",

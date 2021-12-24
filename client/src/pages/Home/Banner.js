@@ -2,13 +2,15 @@ import React from "react";
 // import { Carousel } from "react-carousel-minimal";
 import BANNER_PARADISE from "@images/paradise_banner.jpg";
 import BANNER_PLAM from "@images/plam_banner.jpg";
+import BANNER_BACKGROUND from "@images/background_image.jpg";
+
 // https://www.npmjs.com/package/react-material-ui-carousel
 import Carousel from "react-material-ui-carousel";
 import { CarouselWrapper } from "./style";
 
 const Banner = ({ onChange, onClickItem, onClickThumb }) => {
     return (
-        <CarouselWrapper>
+        <CarouselWrapper style={{"background": `url("${BANNER_BACKGROUND}")`}}>
             <Carousel
                 indicatorIconButtonProps={{
                     style: {

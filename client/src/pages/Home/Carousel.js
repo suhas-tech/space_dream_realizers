@@ -8,6 +8,13 @@ import Hill_Streak from "@images/Hill_Streak.jpg";
 import Theresa_Garden_Streak from "@images/Theresa_Garden_Streak.jpg";
 import VAZWIN_STREAK from "@images/VAZWIN_STREAK.jpg";
 import Victoria from "@images/Victoria.jpg";
+
+import HI_STREAK from "@images/hi-streak.jpeg";
+import Silver_Streak from "@images/silver_streak.jpeg";
+import tranquil_streak from "@images/tranquil-streak.jpeg";
+import Unique_Streak from "@images/Unique_Streak.jpeg";
+import Serene_Streak from "@images/serene-streak.jpeg"; 
+
 import InfiniteCarousel from "react-leaf-carousel";
 
 const Carousel = () => {
@@ -20,6 +27,13 @@ const Carousel = () => {
             <div className="image-section">
                 <InfiniteCarousel
                     breakpoints={[
+                        {
+                            breakpoint: 400,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                            },
+                        },
                         {
                             breakpoint: 500,
                             settings: {
@@ -60,9 +74,26 @@ const Carousel = () => {
                         <div className="label">VICTORIA</div>
                     </CarouselItem>
                     <CarouselItem>
-                        <img alt="" src={Hill_Streak} />
-                        <div className="label">HILL STREAK</div>
+                        <img alt="" src={HI_STREAK} />
+                        <div className="label">HI STREAK</div>
                     </CarouselItem>
+                    <CarouselItem>
+                        <img alt="" src={Silver_Streak} />
+                        <div className="label">SILVER STREAK</div>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <img alt="" src={tranquil_streak} />
+                        <div className="label">TRANQUIL STREAK</div>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <img alt="" src={Unique_Streak} />
+                        <div className="label">UNIQUE STREAK</div>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <img alt="" src={Serene_Streak} />
+                        <div className="label">SERENE STREAK</div>
+                    </CarouselItem>
+                    {/* Serene_Streak */}
                 </InfiniteCarousel>
             </div>
         </CarouselSection>

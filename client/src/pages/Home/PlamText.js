@@ -4,7 +4,7 @@ const PlamText = () => {
     return (
         <svg
             // width="496"
-            // height="49"
+            height="38"
             viewBox="0 0 496 49"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

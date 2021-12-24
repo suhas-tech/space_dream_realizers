@@ -6,8 +6,13 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
 import Autocomplete from "@material-ui/lab/Autocomplete";
-
+import Alert from "@material-ui/lab/Alert";
 import {
     ContactBackground,
     ContactFormWrapper,
@@ -20,6 +25,31 @@ import {
 import { submitContactRequest } from "../../apis/contact";
 
 import countryCode from "./countryCode.json";
+
+const validate = (data) => {
+    let valid = null;
+
+    if (
+        data.mail &&
+        !data.mail
+            .toLowerCase()
+            .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            )
+    ) {
+        valid = "Enter a valid mail id.";
+    }
+
+    if (!data.phone) {
+        valid = "Enter a phone number.";
+    }
+
+    if (!data.name) {
+        valid = "Enter a name.";
+    }
+
+    return valid;
+};
 
 const ContactForm = () => {
     const DataConfig = {
@@ -34,6 +64,9 @@ const ContactForm = () => {
     };
 
     const [data, updateData] = useState(DataConfig);
+    const [error, updateError] = useState(null);
+
+    const [success, updateSuccess] = useState(false);
 
     const inputChange = (value, name) => {
         updateData({
@@ -43,8 +76,16 @@ const ContactForm = () => {
     };
 
     const submit = async () => {
-        const result = await submitContactRequest(data);
-        console.log(result);
+        updateError(null);
+
+        const valid = validate(data);
+        if (!valid) {
+            const result = await submitContactRequest(data);
+            updateSuccess(result);
+            updateData(DataConfig)
+        } else {
+            updateError(valid);
+        }
     };
 
     return (
@@ -69,34 +110,45 @@ const ContactForm = () => {
                         </FormGrid>
                         <FormGrid>
                             <div>
-                                <Label> Contact Code </Label>
-                                <Autocomplete
-                                    id="combo-box-demo"
-                                    fullWidth
-                                    options={countryCode}
-                                    getOptionLabel={(option) =>
-                                        option.name + "-" + option.dial_code
-                                    }
-                                    // style={{ width: 300 }}
-                                    onChange={(e, val) =>
-                                        inputChange(val, "code")
-                                    }
-                                    value={data.code}
-                                    renderInput={(params) => (
-                                        <TextField
-                                            style={{
-                                                "background-color": "#fff",
-                                            }}
-                                            {...params}
-                                            label=""
-                                            variant="outlined"
-                                            fullWidth
-                                            size="small"
-                                        />
-                                    )}
-                                />
+                                <Label> Contact Number </Label>
+                                <div className="flex">
+                                    <Autocomplete
+                                        id="combo-box-demo"
+                                        fullWidth
+                                        options={countryCode}
+                                        getOptionLabel={(option) =>
+                                            `${option.dial_code}`
+                                        }
+                                        style={{ width: 140 }}
+                                        onChange={(e, val) =>
+                                            inputChange(val, "code")
+                                        }
+                                        value={data.code}
+                                        renderInput={(params) => (
+                                            <TextField
+                                                style={{
+                                                    "background-color": "#fff",
+                                                }}
+                                                {...params}
+                                                label=""
+                                                variant="outlined"
+                                                fullWidth
+                                                size="small"
+                                            />
+                                        )}
+                                    />
+                                    <Input
+                                    type="number"
+                                        id="phone"
+                                        name="phone"
+                                        onChange={(e) =>
+                                            inputChange(e.target.value, "phone")
+                                        }
+                                        value={data.phone}
+                                    />
+                                </div>
                             </div>
-                            <div>
+                            {/* <div>
                                 <Label> Contact Number </Label>
                                 <Input
                                     id="phone"
@@ -106,9 +158,7 @@ const ContactForm = () => {
                                     }
                                     value={data.phone}
                                 />
-                            </div>
-                        </FormGrid>
-                        <FormGrid>
+                            </div> */}
                             <div>
                                 <Label> Contact Mail </Label>
                                 <Input
@@ -119,6 +169,7 @@ const ContactForm = () => {
                                 />
                             </div>
                         </FormGrid>
+
                         {/* <CheckBoxSection>
                             <Label> Reach me out through </Label>
                                 <FormGroup row>
@@ -176,6 +227,11 @@ const ContactForm = () => {
                         </CheckBoxSection> */}
                     </div>
                     <div className="footer">
+                        {error && (
+                            <div className="error-section">
+                                <Alert severity="error">{error}</Alert>
+                            </div>
+                        )}
                         <Button
                             variant="contained"
                             color="primary"
@@ -186,6 +242,31 @@ const ContactForm = () => {
                     </div>
                 </ContactFormWrapper>
             </Container>
+            <Dialog
+                open={!!success}
+                onClose={() => {
+                    updateSuccess(null);
+                }}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">Success</DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Your request has been submitted successfully.
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button
+                        onClick={() => {
+                            updateSuccess(null);
+                        }}
+                        color="primary"
+                    >
+                        Close
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </ContactBackground>
     );
 };

@@ -82,10 +82,17 @@ export const BetterExp = styled.div`
 `;
 
 export const CarouselWrapper = styled.div`
+margin-bottom: -7px;
     & img {
         width: 100%;
         height: 100%;
     }
+
+   & img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 389/144;
+      }
 `;
 
 export const TextUnderConstruction = styled.div`
@@ -590,6 +597,11 @@ export const ContactFormWrapper = styled.div`
     & .footer {
         margin-top: 25px;
 
+        & .error-section {
+            margin-bottom: 20px;
+            display:flex;
+            min-width: 250px;
+        }
         > button {
             max-width: 250px;
             width: 100%;
@@ -609,7 +621,7 @@ export const Label = styled.p`
 export const Input = styled.input`
     background-color: #fff;
     font-size: 22px;
-    min-width: 400px;
+ 
     padding: 6px;
     @media (max-width: 500px) {
         min-width: 100%;
@@ -620,6 +632,9 @@ export const FormGrid = styled.div`
     display: grid;
     grid-template-columns: 400px 400px;
     grid-gap: 20px 40px;
+    & .flex {
+        display: flex;
+    }
     @media (max-width: 767px) {
         display:block;
     }

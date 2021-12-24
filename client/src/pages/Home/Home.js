@@ -200,7 +200,13 @@ const Home = (props) => {
                                     <Arrow />
                                 </div>
                             </FloorInfoButton>
-                            <FloorInfoButton>
+                            <FloorInfoButton
+                                onClick={() => {
+                                    updateFloorSizeData(
+                                        config.PARADISE_STREAK_SIZE
+                                    );
+                                }}
+                            >
                                 <div className="icon-left">
                                     <FloorSize />
                                 </div>
@@ -262,7 +268,7 @@ const Home = (props) => {
                     handleClose={() => updateFloorPlanData(null)}
                 />
             )}
-              {floorSizeData && (
+            {floorSizeData && (
                 <FloorSizeModal
                     open={!!floorSizeData}
                     data={floorSizeData}

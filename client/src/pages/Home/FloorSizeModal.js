@@ -17,7 +17,7 @@ import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles({
     table: {
-        minWidth: 450,
+        minWidth: 250,
     },
 });
 

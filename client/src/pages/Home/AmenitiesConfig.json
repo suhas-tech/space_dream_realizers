@@ -1,0 +1,22 @@
+{
+    "PLAM_STREAK": {
+        "01": "ENTRANCE / EXIT GATE",
+        "02": "SECURITY ROOM",
+        "03": "DROP OFF PORTAL",
+        "04": "LOBBY ENTRANCE PORCH",
+        "05": "WATER FEATURE",
+        "06": "PROPOSED PRIVATE GARDEN",
+        "07": "PATHWAY TO DECK AREA",
+        "08": "SEATING DECK WITH PERGOLA",
+        "09": "STEP-OUT",
+        "10": "SEATING COURTYARD",
+        "11": "FEATURE WALL",
+        "12": "TOT LOT",
+        "13": "POOL COURTYARD",
+        "14": "MAIN POOL",
+        "15": "KID’s POOL",
+        "16": "BASKETBALL RING AREA",
+        "17": "CHILDREN’S PLAY AREA",
+        "18": "SHADED SEATING AREA"
+    }
+}
