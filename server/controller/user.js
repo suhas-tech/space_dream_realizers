@@ -2,7 +2,7 @@ const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 
-const smtpEndpoint = "email-smtp.us-west-2.amazonaws.com";
+const smtpEndpoint = "email-smtp.us-east-2.amazonaws.com";
 
 const port = 587;
 
@@ -10,10 +10,10 @@ const senderAddress = "suhas0313@gmail.com";
 
 var toAddresses = "dreamrealizers@gmail.com";
 
-const smtpUsername = "AKIA3AQCBXPQ2MBOIC32";
+const smtpUsername = "AKIA3AQCBXPQ2N6J5MW3";
 
 // Replace smtp_password with your Amazon SES SMTP password.
-const smtpPassword = "BFKWnOuGuho1/6dUqGFebiSTHsAkFs5+YEMew2gNlM4g";
+const smtpPassword = "BGILGzyT4ys3b7Kmjwt3S0bdcqOPLlPSm9wZL/lU0VSh";
 
 exports.register = async (req, res) => {
   const { email, password } = req.body;
