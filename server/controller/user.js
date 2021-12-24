@@ -71,18 +71,17 @@ exports.authenticate = async (req, res) => {
 
 exports.submitContactRequest = async (req, res) => {
   try {
+    let transporter = nodemailer.createTransport({
+      host: smtpEndpoint,
+      port: port,
+      secure: false, // true for 465, false for other ports
+      auth: {
+        user: smtpUsername,
+        pass: smtpPassword,
+      },
+    });
 
-  let transporter = nodemailer.createTransport({
-    host: smtpEndpoint,
-    port: port,
-    secure: false, // true for 465, false for other ports
-    auth: {
-      user: smtpUsername,
-      pass: smtpPassword,
-    },
-  });
-
-  var body_html = `<html>
+    var body_html = `<html>
 <head></head>
 <body>
   <h1>Amazon SES Test (Nodemailer)</h1>
@@ -91,18 +90,18 @@ exports.submitContactRequest = async (req, res) => {
 </body>
 </html>`;
 
-  let mailOptions = {
-    from: senderAddress,
-    to: toAddresses,
-    subject: "Contact Request submitted",
-    html: body_html,
+    let mailOptions = {
+      from: senderAddress,
+      to: toAddresses,
+      subject: "Contact Request submitted",
+      html: body_html,
 
-    headers: {
-      "X-SES-CONFIGURATION-SET": "ConfigSet",
-      // 'X-SES-MESSAGE-TAGS': tag0,
-      // 'X-SES-MESSAGE-TAGS': tag1
-    },
-  };
+      headers: {
+        "X-SES-CONFIGURATION-SET": `"Statement": [ { "Effect": "Allow", "Action": [ "ses:*" ], "Resource": "*" }`,
+        // 'X-SES-MESSAGE-TAGS': tag0,
+        // 'X-SES-MESSAGE-TAGS': tag1
+      },
+    };
     let info = await transporter.sendMail(mailOptions);
     console.log(info);
     res.send(info);
