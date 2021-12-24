@@ -588,7 +588,7 @@ export const ContactFormWrapper = styled.div`
     }
 
     & .footer {
-        margin-top: 15px;
+        margin-top: 25px;
 
         > button {
             max-width: 250px;

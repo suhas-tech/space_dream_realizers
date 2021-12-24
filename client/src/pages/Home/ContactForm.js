@@ -5,7 +5,8 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
-
+import TextField from "@material-ui/core/TextField";
+import Autocomplete from "@material-ui/lab/Autocomplete";
 
 import {
     ContactBackground,
@@ -16,23 +17,25 @@ import {
     CheckBoxSection,
 } from "./style";
 
-import {submitContactRequest} from "../../apis/contact";
+import { submitContactRequest } from "../../apis/contact";
+
+import countryCode from "./countryCode.json";
 
 const ContactForm = () => {
     const DataConfig = {
         name: "",
         mail: "",
         phone: "",
-        // mailMe: false,
-        // callMe: false,
-        // whatsappMe: false,
+        code: {
+            name: "India",
+            dial_code: "+91",
+            code: "IN",
+        },
     };
 
     const [data, updateData] = useState(DataConfig);
 
     const inputChange = (value, name) => {
-        console.log(value, name);
-
         updateData({
             ...data,
             [name]: value,
@@ -42,7 +45,7 @@ const ContactForm = () => {
     const submit = async () => {
         const result = await submitContactRequest(data);
         console.log(result);
-    }
+    };
 
     return (
         <ContactBackground>
@@ -66,6 +69,34 @@ const ContactForm = () => {
                         </FormGrid>
                         <FormGrid>
                             <div>
+                                <Label> Contact Code </Label>
+                                <Autocomplete
+                                    id="combo-box-demo"
+                                    fullWidth
+                                    options={countryCode}
+                                    getOptionLabel={(option) =>
+                                        option.name + "-" + option.dial_code
+                                    }
+                                    // style={{ width: 300 }}
+                                    onChange={(e, val) =>
+                                        inputChange(val, "code")
+                                    }
+                                    value={data.code}
+                                    renderInput={(params) => (
+                                        <TextField
+                                            style={{
+                                                "background-color": "#fff",
+                                            }}
+                                            {...params}
+                                            label=""
+                                            variant="outlined"
+                                            fullWidth
+                                            size="small"
+                                        />
+                                    )}
+                                />
+                            </div>
+                            <div>
                                 <Label> Contact Number </Label>
                                 <Input
                                     id="phone"
@@ -76,6 +107,8 @@ const ContactForm = () => {
                                     value={data.phone}
                                 />
                             </div>
+                        </FormGrid>
+                        <FormGrid>
                             <div>
                                 <Label> Contact Mail </Label>
                                 <Input
@@ -143,7 +176,11 @@ const ContactForm = () => {
                         </CheckBoxSection> */}
                     </div>
                     <div className="footer">
-                        <Button  variant="contained" color="primary" onClick={submit}>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={submit}
+                        >
                             Submit
                         </Button>
                     </div>

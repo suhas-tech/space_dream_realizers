@@ -8,7 +8,7 @@ const port = 587;
 
 const senderAddress = "suhas0313@gmail.com";
 
-var toAddresses = "suhas0313@gmail.com";
+var toAddresses = "dreamrealizers@gmail.com";
 
 const smtpUsername = "AKIA3AQCBXPQ2N6J5MW3";
 
