@@ -119,8 +119,8 @@ module.exports = {
                     <title>Space and Space</title>
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-                    <link rel="apple-touch-icon" href="favicon.ico" />
-                    <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
+                    <link rel="apple-touch-icon" href="/files/logo.png" />
+                    <link rel="icon" href="/files/logo.png" type="image/png" sizes="16x16">
                     <style>
                       body {
                         background: #f1f3f6;
@@ -184,14 +184,14 @@ module.exports = {
                       rel="stylesheet"
                     />
                     <!-- Global site tag (gtag.js) - Google Analytics -->
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-523LSQMCQF"></script>
-                    <script>
-                      window.dataLayer = window.dataLayer || [];
-                      function gtag(){dataLayer.push(arguments);}
-                      gtag('js', new Date());
+                    // <script async src="https://www.googletagmanager.com/gtag/js?id=G-523LSQMCQF"></script>
+                    // <script>
+                    //   window.dataLayer = window.dataLayer || [];
+                    //   function gtag(){dataLayer.push(arguments);}
+                    //   gtag('js', new Date());
 
-                      gtag('config', 'G-523LSQMCQF');
-                    </script>
+                    //   gtag('config', 'G-523LSQMCQF');
+                    // </script>
                   </head>
                   <body>
                     <div id="lds-ring">

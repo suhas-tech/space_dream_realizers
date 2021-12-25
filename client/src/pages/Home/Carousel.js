@@ -77,10 +77,10 @@ const Carousel = () => {
                         <img alt="" src={HI_STREAK} />
                         <div className="label">HI STREAK</div>
                     </CarouselItem>
-                    <CarouselItem>
+                    {/* <CarouselItem>
                         <img alt="" src={Silver_Streak} />
                         <div className="label">SILVER STREAK</div>
-                    </CarouselItem>
+                    </CarouselItem> */}
                     <CarouselItem>
                         <img alt="" src={tranquil_streak} />
                         <div className="label">TRANQUIL STREAK</div>
