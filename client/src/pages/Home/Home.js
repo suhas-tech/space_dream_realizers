@@ -68,7 +68,7 @@ const Home = (props) => {
                         </div>
                         <div className="floor-count-wrapper">
                             <div>NO OF FLOORS</div>
-                            <div className="floor-count">9</div>
+                            <div className="floor-count">14</div>
                         </div>
                         <FloorInfoButtonWrapper>
                             <FloorInfoButton
@@ -169,7 +169,7 @@ const Home = (props) => {
                         </div>
                         <div className="floor-count-wrapper">
                             <div>NO OF FLOORS</div>
-                            <div className="floor-count">9</div>
+                            <div className="floor-count">5</div>
                         </div>
                         <FloorInfoButtonWrapper>
                             <FloorInfoButton

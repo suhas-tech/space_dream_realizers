@@ -8,7 +8,7 @@ const port = 587;
 
 const senderAddress = "suhas0313@gmail.com";
 
-var toAddresses = "dreamrealizers@gmail.com";
+var toAddresses = "suhas0313@gmail.com";
 
 const smtpUsername = "AKIA3AQCBXPQ2N6J5MW3";
 
@@ -71,7 +71,7 @@ exports.authenticate = async (req, res) => {
 
 exports.submitContactRequest = async (req, res) => {
   try {
-    const {name, number, mail} = req.body
+    const {name, number, code, mail} = req.body
   let transporter = nodemailer.createTransport({
     host: smtpEndpoint,
     port: port,
@@ -93,7 +93,7 @@ exports.submitContactRequest = async (req, res) => {
     <body>
       <h1>A request has been posted.</h1>
       <div>  Name: ${name} </div>
-      <div>  Contact: ${number} </div>
+      <div>  Contact: ${code.dial_code}${number} </div>
       <div>  Mail: ${mail} </div>
     </body>
     </html>`,
