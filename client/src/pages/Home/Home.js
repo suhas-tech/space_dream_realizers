@@ -227,7 +227,7 @@ const Home = (props) => {
                                         <Lift />
                                     </div>
                                     <div className="icon-text">
-                                        8 Passenger Lift
+                                        8 Passengers Lift
                                     </div>
                                 </div>
                                 <div className="icon-wrapper">
