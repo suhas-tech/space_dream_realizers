@@ -183,15 +183,7 @@ module.exports = {
                       href="https://fonts.googleapis.com/css?family=Nunito:400,700"
                       rel="stylesheet"
                     />
-                    <!-- Global site tag (gtag.js) - Google Analytics -->
-                    // <script async src="https://www.googletagmanager.com/gtag/js?id=G-523LSQMCQF"></script>
-                    // <script>
-                    //   window.dataLayer = window.dataLayer || [];
-                    //   function gtag(){dataLayer.push(arguments);}
-                    //   gtag('js', new Date());
-
-                    //   gtag('config', 'G-523LSQMCQF');
-                    // </script>
+                   
                   </head>
                   <body>
                     <div id="lds-ring">
