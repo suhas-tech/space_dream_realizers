@@ -26,6 +26,8 @@ import KidsPool from "./Icons/KidsPool";
 import PlayArea from "./Icons/PlayArea";
 import MainPool from "./Icons/MainPool";
 import Seating from "./Icons/Seating";
+import Lift from "./Icons/Lift";
+import Gas from "./Icons/Gas";
 
 import ContactForm from "./ContactForm";
 import Carousel from "./Carousel";
@@ -143,7 +145,7 @@ const Home = (props) => {
                                 <ViewMoreWrapper>
                                     <div className="count">+14</div>
                                     <div className="more-text">More</div>
-                                    <div className="link">View more</div>
+                                    {/* <div className="link">View more</div> */}
                                 </ViewMoreWrapper>
                             </AmenitiesIcons>
                         </AmenitiesSection>
@@ -222,18 +224,22 @@ const Home = (props) => {
                             <AmenitiesIcons>
                                 <div className="icon-wrapper">
                                     <div className="icon">
-                                        <KidsPool />
+                                        <Lift />
                                     </div>
-                                    <div className="icon-text">Kids Pool</div>
+                                    <div className="icon-text">
+                                        8 Passenger Lift
+                                    </div>
                                 </div>
                                 <div className="icon-wrapper">
                                     <div className="icon">
-                                        <PlayArea />
+                                        <Gas />
                                     </div>
-                                    <div className="icon-text">Play Area</div>
+                                    <div className="icon-text">
+                                        Reticulated Gas Connection
+                                    </div>
                                 </div>
 
-                                <div className="icon-wrapper">
+                                {/* <div className="icon-wrapper">
                                     <div className="icon">
                                         <MainPool />
                                     </div>
@@ -247,12 +253,12 @@ const Home = (props) => {
                                     <div className="icon-text">
                                         Seating Area
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <ViewMoreWrapper>
-                                    <div className="count">+14</div>
+                                    <div className="count">+ 5</div>
                                     <div className="more-text">More</div>
-                                    <div className="link">View more</div>
+                                    {/* <div className="link">View more</div> */}
                                 </ViewMoreWrapper>
                             </AmenitiesIcons>
                         </AmenitiesSection>

@@ -537,11 +537,12 @@ export const AmenitiesIcons = styled.div`
     }
 
     & .icon {
+        text-align: center;
     }
 
     & .icon-text {
         font-size: 14px;
-        // text-align:center;
+        text-align:center;
     }
 
     @media (max-width: 500px) {
