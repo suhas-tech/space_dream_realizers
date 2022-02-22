@@ -11,6 +11,13 @@ import {
     AmenitiesSection,
     AmenitiesIcons,
     ViewMoreWrapper,
+    AmenitiesItem,
+    AmenitiesWrapper,
+    AmenitiesContainer,
+    AmenitiesContainerColor,
+    AmenitiesTitle,
+    DialogTitleStyled,
+    AmenitiesOneWrapper,
 } from "./style";
 
 import Plam_Streak from "@images/Plam_Streak.png";
@@ -33,6 +40,7 @@ import ContactForm from "./ContactForm";
 import Carousel from "./Carousel";
 import FloorPlanModal from "./FloorPlanModal";
 import FloorSizeModal from "./FloorSizeModal";
+import AmenitiesDialog from "./AmenitiesDialog";
 
 import PLAM_FLOOR_PLAN from "@images/plam_floor_plan.jpg";
 import PARADISE_FLOOR_PLAN_1 from "@images/paradise_floor_1.jpg";
@@ -40,12 +48,15 @@ import PARADISE_FLOOR_PLAN_2 from "@images/paradise_floor_2.jpg";
 import PARADISE_FLOOR_PLAN_3 from "@images/paradise_floor_3.jpg";
 
 import config from "./config.json";
+import AmenitiesConfig from "./AmenitiesConfig.json";
 
-console.log(config, "config");
 const Home = (props) => {
     const [floorPlanData, updateFloorPlanData] = useState(null);
 
     const [floorSizeData, updateFloorSizeData] = useState(null);
+
+    const [amenitiesModal, setAmenitiesModal] = useState(null);
+    const [amenitiesSection, setAmenitiesSection] = useState(null);
 
     return (
         <React.Fragment>
@@ -53,12 +64,14 @@ const Home = (props) => {
 
             <SplitConatiner className="bg-white">
                 <Container>
-                    <div className="image-container">
+                    <div className="title image-container">
                         <img src={Plam_Streak} />
                     </div>
                     <div className="content grey-background">
-                        <div className="title">
-                            <PlamText />
+                        <div className="main-title">
+                            {/* <PlamText /> */}
+                        NORTHERN SKY Plam Streak
+
                         </div>
                         <div className="location">
                             <div className="location-icon">
@@ -142,7 +155,15 @@ const Home = (props) => {
                                     </div>
                                 </div>
 
-                                <ViewMoreWrapper>
+                                <ViewMoreWrapper
+                                    onClick={() => {
+                                        if (amenitiesSection == "PLAM_STREAK") {
+                                            setAmenitiesSection(null);
+                                        } else {
+                                            setAmenitiesSection("PLAM_STREAK");
+                                        }
+                                    }}
+                                >
                                     <div className="count">+14</div>
                                     <div className="more-text">More</div>
                                     {/* <div className="link">View more</div> */}
@@ -152,14 +173,35 @@ const Home = (props) => {
                     </div>
                 </Container>
             </SplitConatiner>
+            {
+                <AmenitiesContainerColor
+                    className={amenitiesSection == "PLAM_STREAK" ? "show" : ""}
+                >
+                    <AmenitiesContainer>
+                        <AmenitiesTitle>
+                            Northern Sky Plam Streak Amenities
+                        </AmenitiesTitle>
+                        <AmenitiesWrapper>
+                            {AmenitiesConfig.PLAM_STREAK?.list.map((item) => {
+                                return (
+                                    <AmenitiesItem>
+                                        <div className="label"> {item}</div>
+                                    </AmenitiesItem>
+                                );
+                            })}
+                        </AmenitiesWrapper>
+                    </AmenitiesContainer>
+                </AmenitiesContainerColor>
+            }
             <SplitConatiner className="bg-grey">
                 <Container>
                     <div className="image-container grey-background">
                         <img src={Paradise_streak} />
                     </div>
                     <div className="content ">
-                        <div className="title">
-                            <ParadiseText />
+                        <div className="main-title">
+                            {/* <ParadiseText /> */}
+                            Marian Paradise Streak
                         </div>
                         <div className="location">
                             <div className="location-icon">
@@ -255,7 +297,20 @@ const Home = (props) => {
                                     </div>
                                 </div> */}
 
-                                <ViewMoreWrapper>
+                                <ViewMoreWrapper
+                                    onClick={() => {
+                                        if (
+                                            amenitiesSection ==
+                                            "PARADISE_STREAK"
+                                        ) {
+                                            setAmenitiesSection(null);
+                                        } else {
+                                            setAmenitiesSection(
+                                                "PARADISE_STREAK"
+                                            );
+                                        }
+                                    }}
+                                >
                                     <div className="count">+ 5</div>
                                     <div className="more-text">More</div>
                                     {/* <div className="link">View more</div> */}
@@ -265,6 +320,46 @@ const Home = (props) => {
                     </div>
                 </Container>
             </SplitConatiner>
+
+            {
+                <AmenitiesContainerColor
+                    className={
+                        amenitiesSection == "PARADISE_STREAK" ? "show" : ""
+                    }
+                >
+                    <AmenitiesContainer>
+                        <AmenitiesTitle>
+                            Marian Paradise Streak Commercial Amenities
+                        </AmenitiesTitle>
+                        <AmenitiesWrapper className="two-section">
+                            {AmenitiesConfig.PARADISE_STREAK?.commercial?.list.map(
+                                (item) => {
+                                    return (
+                                        <AmenitiesItem>
+                                            <div className="label"> {item}</div>
+                                        </AmenitiesItem>
+                                    );
+                                }
+                            )}
+                        </AmenitiesWrapper>
+
+                        <AmenitiesTitle>
+                            Marian Paradise Streak Residency Amenities
+                        </AmenitiesTitle>
+                        <AmenitiesWrapper className="two-section">
+                            {AmenitiesConfig.PARADISE_STREAK?.residency?.list.map(
+                                (item) => {
+                                    return (
+                                        <AmenitiesItem>
+                                            <div className="label"> {item}</div>
+                                        </AmenitiesItem>
+                                    );
+                                }
+                            )}
+                        </AmenitiesWrapper>
+                    </AmenitiesContainer>
+                </AmenitiesContainerColor>
+            }
             <ContactForm />
             <Carousel />
             {floorPlanData && (
@@ -279,6 +374,13 @@ const Home = (props) => {
                     open={!!floorSizeData}
                     data={floorSizeData}
                     handleClose={() => updateFloorSizeData(null)}
+                />
+            )}
+            {amenitiesModal && (
+                <AmenitiesDialog
+                    open={!!amenitiesModal}
+                    data={amenitiesModal}
+                    handleClose={() => setAmenitiesModal(false)}
                 />
             )}
         </React.Fragment>

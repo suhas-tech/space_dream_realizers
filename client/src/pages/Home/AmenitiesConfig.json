@@ -1,22 +1,50 @@
 {
     "PLAM_STREAK": {
-        "01": "ENTRANCE / EXIT GATE",
-        "02": "SECURITY ROOM",
-        "03": "DROP OFF PORTAL",
-        "04": "LOBBY ENTRANCE PORCH",
-        "05": "WATER FEATURE",
-        "06": "PROPOSED PRIVATE GARDEN",
-        "07": "PATHWAY TO DECK AREA",
-        "08": "SEATING DECK WITH PERGOLA",
-        "09": "STEP-OUT",
-        "10": "SEATING COURTYARD",
-        "11": "FEATURE WALL",
-        "12": "TOT LOT",
-        "13": "POOL COURTYARD",
-        "14": "MAIN POOL",
-        "15": "KID’s POOL",
-        "16": "BASKETBALL RING AREA",
-        "17": "CHILDREN’S PLAY AREA",
-        "18": "SHADED SEATING AREA"
+        "title": "Northern Sky Plam Streak",
+        "list": [
+             "SEPARATE ENTRANCE / EXIT GATE",
+             "SECURITY ROOM",
+             "DROP OFF PORTAL",
+             "LOBBY ENTRANCE PORCH",
+             "PROPOSED PRIVATE GARDEN",
+             "PATHWAY TO DECK AREA",
+             "SEATING DECK WITH PERGOLA",
+             "STEP-OUT",
+             "SEATING COURTYARD",
+             "FEATURE WALL",
+             "POOL COURTYARD",
+             "POOL WITH KIDS AREA",
+             "BASKETBALL RING AREA",
+             "CHILDREN’S PLAY AREA",
+             "SHADED SEATING AREA"
+        ]
+    },
+    "PARADISE_STREAK": {
+        "title": "Marian Paradise Streak",
+        "commercial": {
+            "title" : "Commercial Amenities",
+            "list" : [
+                "Four Level of retail Shopping space",
+                "Ample car parking space",
+                "10 passenger elevator exclusive for shopping space",
+                "Polished granite and vitrified tile flooring",
+                "Power backup",
+                "Toilet blocks on all floors",
+                "Fire safety provisions"
+            ]
+        },
+        "residency": {
+            "title" : "Residency Amenities",
+            "list" : [
+                "Car Parking",
+                "Terrance Area for Parties",
+                "Reticuled Gas Connection",
+                "Rain water Harvesting System",
+                "8 passenger lift",
+                "Power backup"
+            ]
+        }
+            
+        
     }
 }

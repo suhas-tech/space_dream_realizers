@@ -36,22 +36,23 @@ const ContactModal = (props) => {
                 <div>
                     <DialogContentText>
                         We know you have queries thats why we are here! Drop us
-                        a message on whatsApp or call us. Send us a mail to get
+                        a message or call us. Send us a mail to get
                         quotes. As we said, we are always happy to hear you out!
                     </DialogContentText>
                     <ContactInfo>
+                    <div className="item">
+                            <div className="icon">
+                                <PhoneIcon />{" "}
+                            </div>
+                            <div className="text">+91 70904 49999</div>
+                        </div>
                         <div className="item">
                             <div className="icon">
                                 <PhoneIcon />{" "}
                             </div>
                             <div className="text">0824 - 4259999</div>
                         </div>
-                        <div className="item">
-                            <div className="icon">
-                                <PhoneIcon />{" "}
-                            </div>
-                            <div className="text">+91 70904 49999</div>
-                        </div>
+                     
 
                         <div className="item">
                             <div className="icon">

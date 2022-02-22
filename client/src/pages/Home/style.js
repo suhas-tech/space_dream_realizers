@@ -82,17 +82,17 @@ export const BetterExp = styled.div`
 `;
 
 export const CarouselWrapper = styled.div`
-margin-bottom: -7px;
+    margin-bottom: -7px;
     & img {
         width: 100%;
         height: 100%;
     }
 
-   & img {
+    & img {
         width: 100%;
         height: auto;
         aspect-ratio: 389/144;
-      }
+    }
 `;
 
 export const TextUnderConstruction = styled.div`
@@ -431,6 +431,21 @@ export const SplitConatiner = styled.div`
         height: 300px;
         padding: 30px 0;
     }
+    & .main-title {
+        font-size: 28px;
+        font-weight: 800;
+        color: #000;
+        -webkit-text-stroke: 1px #000;
+        letter-spacing: 2px;
+    }
+
+    & .title {
+        font-size: 28px;
+        font-weight: 800;
+        color: #000;
+  
+        letter-spacing: 2px;
+    }
 
     & .title svg {
         height: 28px;
@@ -542,7 +557,7 @@ export const AmenitiesIcons = styled.div`
 
     & .icon-text {
         font-size: 14px;
-        text-align:center;
+        text-align: center;
     }
 
     @media (max-width: 500px) {
@@ -600,7 +615,7 @@ export const ContactFormWrapper = styled.div`
 
         & .error-section {
             margin-bottom: 20px;
-            display:flex;
+            display: flex;
             min-width: 250px;
         }
         > button {
@@ -608,8 +623,6 @@ export const ContactFormWrapper = styled.div`
             width: 100%;
         }
     }
-
-   
 `;
 
 export const Label = styled.p`
@@ -622,7 +635,7 @@ export const Label = styled.p`
 export const Input = styled.input`
     background-color: #fff;
     font-size: 22px;
- 
+
     padding: 6px;
     @media (max-width: 500px) {
         min-width: 100%;
@@ -637,7 +650,7 @@ export const FormGrid = styled.div`
         display: flex;
     }
     @media (max-width: 767px) {
-        display:block;
+        display: block;
     }
 `;
 
@@ -665,13 +678,13 @@ export const CarouselSection = styled.div`
 
         @media (max-width: 500px) {
             font-size: 24px;
-
         }
     }
 `;
 
 export const CarouselItem = styled.div`
     position: relative;
+    cursor: pointer;
     & .label {
         position: absolute;
         font-size: 20px;
@@ -685,15 +698,185 @@ export const CarouselItem = styled.div`
             font-size: 14px;
         }
     }
+    &:hover .content-overlay {
+        opacity: 1;
+    }
+    & .content-overlay {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        height: 99%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+    }
 
-   
+    .content-details {
+        position: absolute;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    &:hover .content-details {
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+    }
+
+    & .content-details h3 {
+        color: #fff;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+    }
+
+    .content-details div {
+        color: #fff;
+    }
+
+    .fadeIn-bottom {
+        top: 80%;
+    }
+
+    & .button {
+        font-weight: 600;
+        font-size: 22px;
+        border: 1px solid #fff;
+        border-radius: 6px;
+        max-width: 200px;
+        margin: 0 auto;
+        padding: 10px 0;
+        cursor: pointer;
+        &:hover {
+            background-color: #ffffff30;
+        }
+    }
 `;
 
 export const ImageHolder = styled.div`
-    height: 57vh;
+    height: 65vh;
     & img {
         width: 100%;
         height: 100%;
-        max-height: 57vh;
+        max-height: 65vh;
+        object-fit:contain;
+    }
+`;
+
+export const AmenitiesWrapper = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 100%;
+    }
+
+    &.two-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 1020px) {
+        &.two-section {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+`;
+
+export const AmenitiesOneWrapper = styled.div`
+    display: grid;
+
+    & .title {
+        color: #00052b;
+        padding: 10px;
+    }
+`;
+
+export const AmenitiesContainer = styled.div`
+    max-width: 1180px;
+    margin: 0 auto;
+`;
+
+export const AmenitiesContainerColor = styled.div`
+    background-color: #00062b;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    color: #000;
+    padding: 0px;
+    max-height: 0;
+    transition: max-height 0.15s,  padding 0.15s ease-out;
+    overflow: hidden;
+  
+
+    &.show {
+        padding: 20px;
+        max-height: 600px;
+        transition: max-height 0.25s,  padding 0.15s ease-in  ;
+    }
+`;
+
+export const AmenitiesTitle = styled.div`
+    color: #000;
+    text-decoration: underline;
+    padding: 10px;
+    font-size: 26px;
+    font-weight: 600;
+`;
+
+export const AmenitiesItem = styled.div`
+    & .number {
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-color: #00052b;
+        color: #fff;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    & .label {
+        padding: 1px 10px 10px 1px;
+        text-transform: uppercase;
+    }
+    display: flex;
+    align-items: center;
+    margin: 1px 10px;
+    font-weight: 600;
+`;
+
+export const DialogTitleStyled = styled.div`
+    background-color: #00052b;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+
+        & .button {
+            display: flex;
+            justify-content: center;
+        }
     }
 `;

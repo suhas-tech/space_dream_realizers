@@ -12,13 +12,14 @@ import {ImageHolder} from "./style";
 const FloorPlanModal = (props) => {
     const { open, handleClose, data } = props;
 
-    console.log(props, "props")
     return (
         <Dialog
             open={open}
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
+            maxWidth="md"
+            fullWidth
         >
             <DialogTitle id="alert-dialog-title">{data.title}</DialogTitle>
             <DialogContent>
@@ -26,7 +27,7 @@ const FloorPlanModal = (props) => {
                     <Carousel
                         indicatorIconButtonProps={{
                             style: {
-                                padding: "10px", // 1
+                                padding: "10px", 
                             },
                         }}
                         indicatorContainerProps={{
@@ -48,7 +49,7 @@ const FloorPlanModal = (props) => {
             </DialogContent>
             <DialogActions>
                
-                <Button onClick={handleClose} color="primary" autoFocus>
+                <Button onClick={handleClose} color="primary">
                     Close
                 </Button>
             </DialogActions>
