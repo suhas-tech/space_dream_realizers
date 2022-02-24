@@ -35,9 +35,7 @@ const ContactModal = (props) => {
             <CustomDialogContent>
                 <div>
                     <DialogContentText>
-                        We know you have queries thats why we are here! Drop us
-                        a message or call us. Send us a mail to get
-                        quotes. As we said, we are always happy to hear you out!
+                    e are here to help you out. Call us or drop us a message to hear from us soon.
                     </DialogContentText>
                     <ContactInfo>
                     <div className="item">

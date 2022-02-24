@@ -135,7 +135,7 @@ const Carousel = () => {
                                 className="button"
                                 onClick={() => {
                                     updateFloorPlanData({
-                                        title: "Vazwin Streak Floor plan",
+                                        title: "Victoria Floor plan",
                                         data: VICTORIA_PLAN,
                                     });
                                 }}
