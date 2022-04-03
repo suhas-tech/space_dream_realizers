@@ -28,6 +28,7 @@ import {
     THERESA_GARDEN_STREAK_PLAN,
     VAZWIN_STREAK_PLAN,
     VICTORIA_PLAN,
+    SERENE_STREAK_PLAN,
 } from "./getImages";
 
 const Carousel = () => {
