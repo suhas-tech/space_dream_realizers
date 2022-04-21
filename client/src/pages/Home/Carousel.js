@@ -9,9 +9,9 @@ import Theresa_Garden_Streak from "@images/Theresa_Garden_Streak.jpg";
 import VAZWIN_STREAK from "@images/VAZWIN_STREAK.jpg";
 import Victoria from "@images/Victoria.jpg";
 
-import HI_STREAK from "@images/hi-streak.jpeg";
+import HI_STREAK from "@images/hi-streak.jpg";
 import Silver_Streak from "@images/silver_streak.jpeg";
-import tranquil_streak from "@images/tranquil-streak.jpeg";
+import tranquil_streak from "@images/tranquil-streak.jpg";
 import Unique_Streak from "@images/Unique_Streak.jpeg";
 import Serene_Streak from "@images/serene-streak.jpeg";
 import FloorPlanModal from "./FloorPlanModal";
